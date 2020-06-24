@@ -51,7 +51,7 @@ def predict():
         inputt = [n, brand_enc, yop, dist, fuel_enc]
         # Prediction results
         price = (math.ceil(reg.predict(np.array(inputt).reshape(1, 5))))
-        price = price * 20
+        price = price * 25
         return render_template('index.html', price=price, check=1)
     else:
         return render_template('index.html', check=0)
